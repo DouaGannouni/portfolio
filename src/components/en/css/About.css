@@ -1,0 +1,32 @@
+.about-section {
+  background: #f6f8fc;
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(94, 96, 206, 0.07);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 1.2s;
+  opacity: 1;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.about-section:hover {
+  box-shadow: 0 8px 32px #5e60ce22;
+  transform: scale(1.01);
+}
+.about-section h3 {
+  color: #5e60ce;
+  font-size: 1.3rem;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+  text-align: center;
+}
+.about-section p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #22223b;
+  text-align: center;
+}

@@ -1,0 +1,93 @@
+.projects-section {
+  background: #f6f8fc;
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(94, 96, 206, 0.07);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 1.2s;
+  opacity: 1;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.projects-section:hover {
+  box-shadow: 0 8px 32px #5e60ce22;
+  transform: scale(1.01);
+}
+.projects-section h3 {
+  color: #5e60ce;
+  font-size: 1.3rem;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+  text-align: center;
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+  width: 100%;
+}
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #5e60ce22;
+  padding: 22px 18px;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s, filter 0.2s;
+  cursor: pointer;
+  border: 2px solid transparent;
+  filter: grayscale(0.2) brightness(0.98);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: project-in 1s forwards;
+}
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.5s; }
+.project-card:nth-child(3) { animation-delay: 0.8s; }
+@keyframes project-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.07) rotate(1deg);
+  box-shadow: 0 8px 32px #5e60ce33;
+  border: 2px solid #8ec5fc;
+  filter: none;
+}
+.project-card h4 {
+  color: #5e60ce;
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+}
+.project-card p {
+  color: #22223b;
+  font-size: 0.98rem;
+  text-align: center;
+}
+.project-tag {
+  margin-top: 8px;
+  background: #8ec5fc;
+  color: #fff;
+  border-radius: 8px;
+  padding: 3px 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 700px) {
+  .projects-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
